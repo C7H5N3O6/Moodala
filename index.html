@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodala - Mood Quotes & Music</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="mood.png">
+</head>
+<body>
+    <div class="page-container">
+        <main class="content-wrap">
+            <div class="container">
+                <h1>Moodala</h1>
+                <div class="gender-toggle">
+                    <input type="checkbox" id="gender-switch" class="gender-switch">
+                    <label for="gender-switch" class="gender-switch-label">
+                        <i class="fas fa-venus"></i>
+                        <i class="fas fa-mars"></i>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div id="quote-container">
+                    <p id="quote-text"></p>
+                    <p id="quote-author"></p>
+                </div>
+                <div class="mood-buttons">
+                    <button class="mood-btn" data-mood="Happy"><i class="fas fa-smile"></i> Happy</button>
+                    <button class="mood-btn" data-mood="Sad"><i class="fas fa-frown"></i> Sad</button>
+                    <button class="mood-btn" data-mood="Stressed"><i class="fas fa-tired"></i> Stressed</button>
+                    <button class="mood-btn" data-mood="Calm"><i class="fas fa-peace"></i> Calm</button>
+                    <button class="mood-btn" data-mood="Motivated"><i class="fas fa-fire"></i> Motivated</button>
+                    <button class="mood-btn" data-mood="Energized"><i class="fas fa-bolt"></i> Energized</button>
+                </div>
+                <div class="youtube-controls">
+                    <input type="text" id="youtube-url" placeholder="Copy & Paste YouTube URL Here">
+                    <div class="audio-controls">
+                        <button id="play-audio" class="audio-btn"><i class="fas fa-play" title="Play Audio"></i></button>
+                        <button id="pause-audio" class="audio-btn"><i class="fas fa-pause" title="Pause Audio"></i></button>
+                        <button id="stop-audio" class="audio-btn"><i class="fas fa-stop" title="Stop Audio"></i></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; <span id="current-year"></span> Ahmad Afifuddeen</p>
+                <nav class="footer-nav">
+                    <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+                    <a href="privacy-policy.html" class="footer-link">Terms of Service</a>
+                    <a href="privacy-policy.html" class="footer-link">Contact Us</a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+    <div id="player"></div>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+</body>
+</html>
